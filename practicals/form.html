@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: aqua;
+    }
+    .main{
+        background-color:snow;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgb(4, 6, 0);;
+        padding: 20px;
+        width: 300px;
+    }
+    .main h1 {
+            color: #390593;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 2px;
+            color: #555;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        .btn[type="submit"] {
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+</style>
+<body>
+    <div class="main">
+        <h1>Registration</h1>
+        <form action="" method="post">
+            <div class="field-input">
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" id="fname" autocomplete="off" required>
+            </div>
+            <div class="field-input">
+                <label for="lname">Last Name</label>
+                <input type="text" name="lname" id="lname" autocomplete="off" required>
+            </div>
+            <div class="field-input">
+                <label for="age">Age</label>
+                <input type="text" name="age" id="age" autocomplete="off" required>
+            </div>
+            <div class="field-input">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" autocomplete="on" required>
+            </div>
+            <div class="field-input">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">
+                        Male
+                    </option>
+                    <option value="female">
+                        Female
+                    </option>
+                    <option value="other">
+                        Other
+                    </option>
+                </select>
+    
+            </div>
+            <div class="field-input">
+                <label for="contact">Contact</label>
+                <input type="text" id="mobile" name="mobile" maxlength="10" required />
+            </div>
+    
+            <div class="field-input">
+                <input type="submit" class="btn" name="submit" value="submit" required>
+            </div>
+    
+    
+        </form>
+
+    </div>
+   
+ 
+
+</body>
+</html>

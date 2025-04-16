@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div::after{
+           content: "~"; 
+        }
+        div::before{
+           content: "|"; 
+        }
+        p::first-letter{
+            font-size: 36px;
+        }
+        p::first-line{
+            color: teal;
+        }
+        p::selection{
+            color: white;
+            background-color:teal ;
+        }
+        
+    </style>
+</head>
+<body>
+<div>Test</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, ex porro quam libero maiores necessitatibus. Harum eum autem quis voluptas aspernatur magni, fuga, itaque minus debitis aliquid soluta? Quibusdam, ad? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae minima ipsum perferendis, rem culpa voluptas magnam dolores, cumque earum minus provident laborum tempora sit, distinctio explicabo debitis. Reprehenderit, quo sapiente!</p>
+</body>
+</html>
