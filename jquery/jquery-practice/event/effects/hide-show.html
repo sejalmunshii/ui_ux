@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".show").click(function(){
+                $("p").show();
+            });
+            $(".hide").click(function(){
+                $("p").hide(2000);
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <p>hide and show effects</p>
+    <button class="show">show</button>
+    <button class="hide">hide</button>
+</body>
+</html>
