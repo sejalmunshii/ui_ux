@@ -200,12 +200,14 @@
         }
 
         //Use comparison inside a loop (e.g., i < 5).
-        for (let i = 0; i <= 5; i++) {
+        for (let i = 0; i <= 5; i++){
             document.writeln(i + "<br>");
         }
         //Create a login check (username === "admin").
         let username = "someone";
-        let admin="sejal"
+        let admin = "sejal";
+
+        
 
         if (username === "admin") {
             document.writeln("Login successful.<br>");
@@ -213,37 +215,37 @@
             document.writeln("Login failed.<br>");
         }
 
-         document.writeln("<h1>4. Logical Operators Tasks</h1>")
-         //Use && to check if age is between 18 and 60.
+        document.writeln("<h1>4. Logical Operators Tasks</h1>")
+        //Use && to check if age is between 18 and 60.
 
-         let age=45;
-         if(age>=18 && age<=60){
+        let age = 45;
+        if (age >= 18 && age <= 60) {
             document.writeln("you are an adult<br>");
-         }
-         else{
+        }
+        else {
             document.writeln("not an adult<br>")
-         }
+        }
 
-         //Use || to check if user is admin or manager.
-        let user="someone"
-         let admin1="sejal";
-         let manager="someone";
+        //Use || to check if user is admin or manager.
+        let user = "someone"
+        let admin1 = "sejal";
+        let manager = "someone";
 
-         if(admin==user||manager==user){
+        if (admin == user || manager == user) {
             document.writeln("you can logged in <br>");
-         }
-         else{
-             document.writeln("you can not logged in <br>");
-         }
+        }
+        else {
+            document.writeln("you can not logged in <br>");
+        }
 
-         //Use ! to invert a boolean
-         let bool=true;
-         document.writeln(!bool+"<br>");
+        //Use ! to invert a boolean
+        let bool = true;
+        document.writeln(!bool + "<br>");
 
-         //Use logical operators in if statements.
-         //Combine logical operators in a complex condition
+        //Use logical operators in if statements.
+        //Combine logical operators in a complex condition
 
-         let hindi1 = 98;
+        let hindi1 = 98;
         let english1 = 55;
         let maths1 = 76;
         let computer1 = 74;
@@ -252,8 +254,8 @@
         let grade1 = (marks / 400) * 100;
         console.log(grade);
 
-       
-         if (grade1 <= 100 && grade1 > 80) {
+
+        if (grade1 <= 100 && grade1 > 80) {
             document.writeln("Congratulation you have pass at distinction class");
             document.writeln("your total percentage is" + " ", grade1, "%");
         }
@@ -261,7 +263,7 @@
             document.writeln("Congratulation you have pass at first class");
             document.writeln("your total percentage is" + " ", grade1, "%<br>");
         }
-        else if (grade1 <= 75 && grade1> 50) {
+        else if (grade1 <= 75 && grade1 > 50) {
             document.writeln("Congratulation you have pass at second class");
             document.writeln("your total percentage is" + " ", grade1, "%<br>");
         }
@@ -276,59 +278,118 @@
 
         //Use ! with falsy values (!0, !null, etc.).
 
-        let variable="";
+        let variable = "";
         document.writeln(!variable);
 
         document.writeln("<h1>6. String Operators Tasks</h1>")
 
         //Concatenate two strings using +
 
-        let fname="sejal";
-        let sname="munshi";
+        let fname = "sejal";
+        let sname = "munshi";
 
-        document.writeln(fname+sname+"<br>");
+        document.writeln(fname + sname + "<br>");
 
         //Append strings using +=.
 
-        fname +="munshi";
-        document.writeln(fname+"<br>");
+        fname += "munshi";
+        document.writeln(fname + "<br>");
 
         //Combine strings and numbers.
 
-        fname +=23;
-        document.writeln(fname+"<br>");
+        fname += 23;
+        document.writeln(fname + "<br>");
 
         //Use template literals instead of +.
         document.writeln(`${fname}${sname}<br>`);
 
         //Concatenate multiple values in a single line.
         //Build a sentence from variables.
-        let userN="sejal";
-        let userA=23;
-        let islogged="loggedin";
+        let userN = "sejal";
+        let userA = 23;
+        let islogged = "loggedin";
 
-        document.writeln("hello im"+" "+userN+"im"+userA+"im"+islogged+"<br>");
+        document.writeln("hello im" + " " + userN + "im" + userA + "im" + islogged + "<br>");
         //Show difference between number addition and string concatenation (1 + "2").
 
-        let n=1;
-        let s="2";
-        document.writeln(n+s+"<br>");
+        let n = 1;
+        let s = "2";
+        document.writeln(n + s + "<br>");
 
         //Create a welcome message using variables.
-        let msg1="hello";
-        let msg2="wellcome";
-        let msg3="to";
-        let msg4="frameboxx";
-        document.writeln(msg1+" "+" "+msg2+""+" "+msg3+" "+msg4+"<br>");
+        let msg1 = "hello";
+        let msg2 = "wellcome";
+        let msg3 = "to";
+        let msg4 = "frameboxx";
+        document.writeln(msg1 + " " + " " + msg2 + "" + " " + msg3 + " " + msg4 + "<br>");
 
         //Practice using backticks and ${}.
         document.writeln(`${fname}${sname}<br>`);
 
         //Convert number to string before concatenation.
-         n=n.toString();
-         document.writeln(n+s+"<br>");
+        n = n.toString();
+        document.writeln(n + s + "<br>");
 
-        
+        document.writeln("<h1>7. Conditional (Ternary) Operator Tasks</h1>")
+
+        //Use ternary to check if a number is even or odd.
+        let evn = 2;
+        let ans = (evn % 2 == 0 + "<br>") ? document.writeln("number is even" + "<br>") : document.writeln("number is odd" + "<br>");
+
+        //Use ternary to display login status.
+        let employee = true;
+
+        let status = (employee == true) ? document.write("logged in<br>") : document.writeln("not loggedin <br>");
+
+        //Nest ternary operators for multiple conditions.
+        let score = 75;
+        let result = score > 90 ? "Excellent" : score > 70 ? "Good" : score > 50 ? "Average" : "Poor";
+        document.writeln(result + "<br>");
+
+        //Use ternary for age group: child/adult/senior.
+
+        let a_ge = 23;
+
+        let current_age = (a_ge > 65) ? "senior citizen" : a_ge > 18 ? "teenager" : age > 0 ? "child" : "invalid";
+        document.writeln(current_age);
+
+        document.writeln("<h1>8. Type Operators Tasks </h1>")
+        // Use typeof to log the type of a string, number, boolean, null, undefined, etc
+
+        let value1 = 12;
+        let value2 = "hello";
+        let value3 = true;
+        let value4 = null;
+        let value5;
+        document.writeln(typeof (value1));
+        document.writeln(typeof (value2));
+        document.writeln(typeof (value3));
+        document.writeln(typeof (value4));
+        document.writeln(typeof (value5) + "<br>");
+
+        //Check if a variable is a function.
+
+        function name() {
+            let a = 2;
+            document.writeln(a);
+        }
+        document.writeln(name()+ "<br>");
+        document.writeln(typeof (name)+ "<br>");
+
+        //Create a function that logs type of any input.
+        function anything() {
+            let a = 2;
+            document.writeln(typeof(a)+ "<br>");
+        }
+        document.writeln(anything()+ "<br>");
+
+
+
+
+
+
+
+
 
 
 
