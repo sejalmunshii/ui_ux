@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .navbar-nav li:hover {
+            color: red;
+        }
+
+        .search-header input {
+            font-size: 15px;
+            border-radius: 30px 0 0 30px;
+            background: aliceblue;
+            padding: 8px 15px;
+            color: black;
+            border: 2px solid black;
+            border-right: none;
+        }
+
+        .search-header input:focus {
+            box-shadow: none;
+            border-color: var(--border-color-light);
+            background: var(--bg-color);
+            color: var(--heading-color);
+        }
+
+        .search-header button.btn-style {
+            border-radius: 0 30px 30px 0;
+            box-shadow: none;
+            padding: 6px 13px;
+            font-size: 15px;
+            background-color: red;
+            color: whitesmoke
+        }
+
+        .search-header button.btn-style:hover {
+            border-color: dark;
+            background: #0d70fd;
+            color: #fff;
+        }
+
+        .nav-fixed .navbar .navbar-brand {
+            color: var(--heading-color);
+        }
+
+        .section1 {
+            position: relative;
+        }
+
+        .box {
+            background-color: #fff;
+            color: black;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .text h2{
+            font-size: 70px;
+            line-height: 90px;
+            opacity: .10;
+            transition: 0.3 ease-in-out;
+            padding-right: 10px;
+        }
+        .text i{
+            font-size: 50px;
+        }
+        a.read{
+            font-size: 15px;
+            border-bottom: 2px solid red;
+            color: black;
+            font-weight: 600;
+            border-radius: 0;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">WORKUP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Blog with right sidebar</a></li>
+                            <li><a class="dropdown-item" href="#">Blog with left sidebar</a></li>
+                            <li><a class="dropdown-item" href="#">Blog without sidebar</a></li>
+                            <li><a class="dropdown-item" href="#">Blog Single with right
+                                </a></li>
+                            <li><a class="dropdown-item" href="#">Blog Single with left sidebar</a></li>
+                            <li><a class="dropdown-item" href="#">Blog Single without sidebar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Page
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">404 Page</a></li>
+                            <li><a class="dropdown-item" href="#">Email Template</a></li>
+                            <li><a class="dropdown-item" href="#">Shortcodes</a></li>
+                            <li><a class="dropdown-item" href="#">Landing Page </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <form action="error.html" method="GET" class="d-flex search-header ms-lg-2">
+                        <input class="form-control" type="search" placeholder="Enter Keyword..." aria-label="Search"
+                            required>
+                        <button class="btn btn-style" type="submit"><i class="fa fa-search ">
+                            </i></button>
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="section1">
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../w3layout/image/banner1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="box">
+                            <h6>Business Consultancy</h6>
+                            <h3>Building a future together!</h3>
+                            <a href="#" class="btn-style mt-4">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../w3layout/image/banner2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../w3layout/image/banner3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center mt-5 mb-3">
+                    <h6 class="text-danger fs-1">Valued Services</h6>
+                    <h2 class="fs-1">More than 30+ years we provide business consulting</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="d-flex">
+                <div class="col ">
+                    <div class="card " style="width: 18rem;">
+                        <div class="icon d-flex text  justify-content-between">
+                            <i class="fas fa-donate text-danger ms-3 mt-3"></i>
+                             <h2>01</h2>
+                        </div>
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">Financial Planning</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card’s content.</p>
+                                 <a href="#" class="read">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card  " style="width: 18rem;">
+                        <div class="icon text d-flex  justify-content-between">
+                            <i class="fas fa-marker text-danger ms-3 mt-3"></i>
+                             <h2>02</h2>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Training Service</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card’s content.</p>
+                                 <a href="#" class="read">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card " style="width: 18rem;">
+                        <div class="icon d-flex text  justify-content-between">
+                            <i class="fas fa-user-tie text-danger ms-3 mt-3"></i>
+                            <h2>03</h2>
+                        </div>
+
+                        <div class="card-body">
+                            <h4 class="card-title">Marketing Service</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card’s content.</p>
+                            <a href="#" class="read">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card " style="width: 18rem;">
+                        <div class="">
+                            <div class="icon d-flex text d-flex  justify-content-between">
+                                <i class="fas fa-calculator text-danger ms-3 mt-3"></i>
+                                <h2>04</h2>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Taxation Service</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card’s content.</p>
+                                 <a href="#" class="read">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
