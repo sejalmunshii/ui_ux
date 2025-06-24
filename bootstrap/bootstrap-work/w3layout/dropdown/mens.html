@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+        <style>
+        .image-fluid {
+            width: 100%;
+        }
+
+        .list-item {
+            list-style: none;
+        }
+
+        .list-item a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .list-item input {
+            border: none;
+            background-color: #f5f5f6;
+
+        }
+        .topware{
+            color: #ff3f6c;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+nav a ::after {
+    content: '';
+    width: 0%;
+    /* height: 2px; */
+    background: #f44336;
+    /* display: block; */
+    margin: auto;
+    transition: 0.5s;
+}
+
+.search-box {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+}
+
+main {
+    display: flex;
+}
+
+.filters {
+    width: 200px;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.products {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.dropbtn {
+    /* background-color: #04AA6D; */
+    /* color: white; */
+    /* padding: 16px; */
+    font-size: 16px;
+    border: none;
+    text-transform: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* .dropdown-content a:hover {background-color: #ddd;} */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+    </style>
+
+</head>
+
+<body>
+     <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="../dropdown/image/logo.png" alt="" class="image-fluid " width="100%">
+                </div>
+                <div class="col-11">
+                    <ul class="d-flex list-item justify-content-evenly mt-4">
+                        <li class="ms-3 fw-bolder">
+                            <div class="dropdown">
+                                <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Men
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item topware fw-bold" href="#">Topware</a></li>
+                                    <li><a class="dropdown-item" onclick="openInSameTab(event)" href="#" >T-shirts</a></li>
+                                    <li><a class="dropdown-item " href="#">Casual shirts</a></li>
+                                    <li><a class="dropdown-item " href="#">Formal shirts</a></li>
+                                    <li><a class="dropdown-item " href="#">Sweatshirts</a></li>
+                                    <li><a class="dropdown-item " href="#">Sweater </a></li>
+                                    <li><a class="dropdown-item " href="#">Jackets</a></li>
+                                    <li><a class="dropdown-item " href="#">Blazer &coat</a></li>
+                                    <li><a class="dropdown-item " href="#">suits</a></li>
+                                </ul>
+                        <li>
+                        <li class="ms-3 fw-bolder"><a href="#">Women</a></li>
+                        <li class="ms-3 fw-bolder"><a href="#">Home</a></li>
+                        <li class="ms-3 fw-bolder"><a href="#">Beauty</a></li>
+                        <li class="ms-3 fw-bolder"><a href="#">Kids</a></li>
+                        <li class="ms-3 fw-bolder"><a href="#">Genz</a></li>
+                        <li class="ms-3 fw-bolder"><a href="#">Studio</a></li>
+                        <li class="ms-3 fw-bolder">
+                            <input type="text" placeholder="Search for product ,brand and more" class="ps-5 pe-5">
+                        </li>
+                        <li class="ms-3 mt-4 fw-bolder "><a href="#">Profile</a></li>
+                        <li class="ms-3 mt-4 fw-bolder"><a href="#">Whishlist</a></li>
+                        <li class="ms-3 mt-4 fw-bolder"><a href="#">Bag</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mt-5">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Tshirt</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+   <main class="d-flex">
+     <section>
+        <table border="1">
+            <tr class="text-center">
+                <th>Categories</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="t-shirt" class="brand-filter" value="Tommy Hilfiger">
+                    <label for="t-shirt">T-shirt</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="launge" class="Tommy Hilfiger1">
+                    <label for="launge">Launge T-shirt</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <hr>
+                </td>
+            </tr>
+             <tr class="text-center">
+                <th>Brand</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="hrx" class="brand-filter" value="levis">
+                    <label for="t-shirt">HRX by Hritik Roshan</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="launge" class="brand-filter" value="Manlino">
+                    <label for="launge">Launge T-shirt</label>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section class="products" id="productList">
+
+    </section>
+   </main>
+
+
+<script>
+    let products = [
+    { name: "Men Polo Collar Slim Fit T-shirt", brand: "Tommy Hilfiger", image: "../dropdown/image/img2.jpg" },
+    { name: "Slim-Fit Pure Cotton T-Shirt", brand: "Tommy Hilfiger1", image: "../dropdown/image/img4.webp" },
+    { name: "Solid Lounge T-shirt", brand: "levis", image: "../dropdown/image/img3.webp" },
+    { name: "Unisex Printed T-shirt", brand: "Manlino", image: "../dropdown/image/img1.jpg" },
+    { name: "Pink Slides", brand: "D'Amelio", image: "../dropdown/image/img2.jpg" },
+];
+
+let productList = document.getElementById("productList");
+
+
+
+
+
+function renderProducts(filtered = products) {
+    productList.innerHTML = "";
+    filtered.forEach(product => {
+        productList.innerHTML += `
+      <div class="product">
+        <img src="${product.image}" alt="${product.name}">
+        <h3>${product.name}</h3>
+        <p>${product.brand}</p>
+      </div>
+    `;
+    });
+}
+
+function getCheckedBrands() {
+    const checked = [...document.querySelectorAll(".brand-filter:checked")].map(cb => cb.value);
+    return checked;
+}
+
+function filterProducts() {
+    const selectedBrands = getCheckedBrands();
+    const filtered = selectedBrands.length
+        ? products.filter(p => selectedBrands.includes(p.brand))
+        : products;
+    renderProducts(filtered);
+}
+
+function clearFilters() {
+    document.querySelectorAll(".brand-filter").forEach(cb => (cb.checked = false));
+    renderProducts(products);
+}
+
+
+// // // Event listeners
+document.querySelectorAll(".brand-filter").forEach(cb => {
+    cb.addEventListener("change", filterProducts);
+});
+
+// // // Initial render
+renderProducts();
+</script>
+</body>
+
+</html>
