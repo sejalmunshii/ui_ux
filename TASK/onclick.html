@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .row{
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+        }
+        li{
+            list-style: none;
+            margin-left: 30px;
+        }
+        .btn{
+            display: none;
+        }
+
+        @media (max-width:1000px){
+            .list-item ul {
+                display: none;
+            }
+            .listitem li{
+              font-size: 100px;
+            }
+            .btn{
+                display: block;
+            }
+        }
+          
+    
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <h1>Logo</h1>
+                </div>
+                <div class="col-30 list-item">
+                    <ul class="row">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                        <li>phone</li>
+                        <li>menu</li>
+                    </ul>
+                </div>
+                <div class="col-30">
+                    <button class="btn">click</button>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

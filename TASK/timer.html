@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Circle Countdown Timer</title>
+  <style>
+    body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  width: 60px;
+  font-size: 18px;
+  padding: 5px;
+  text-align: center;
+}
+
+button {
+  padding: 7px 15px;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: #1E90FF;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#countdown {
+  font-size: 40px;
+  color: black;
+}
+  </style>
+</head>
+<body>
+  <div class="input-container">
+    <input type="number" id="timeInput" value="10" min="1">
+    <button onclick="startTimer()">Start</button>
+  </div>
+  
+  <div class="circle">
+    <span id="countdown">00:00</span>
+  </div>
+  <script>
+function startTimer() {
+  const input = document.getElementById("timeInput");
+  const countdownEl = document.getElementById("countdown");
+  let time = parseInt(input.value);
+
+  let timer = setInterval(() => {
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    countdownEl.textContent = 
+      `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+    time--;
+
+    if (time < 0) {
+      clearInterval(timer);
+    }
+  }, 1000);
+}
+  </script>
+
+</body>
+</html>
