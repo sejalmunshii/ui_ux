@@ -3,22 +3,98 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task Scheduler</title>
     <style>
-        h1 {
-            text-align: center;
-            background-color: blue;
-            color: white;
-            padding-top: 20px;
-            padding-bottom: 20px;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
 
+        .header {
+            background-color: #0066ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .task-input {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            gap: 10px;
+        }
+
+        .task-input input[type="text"],
+        .task-input input[type="date"],
+        .task-input select,
+        .task-input button {
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        .task-list {
+            margin: 0 auto;
+            width: 80%;
+            max-width: 700px;
+            background-color: white;
+            border: 1px solid #ccc;
+            min-height: 40px;
+            padding: 10px;
+            box-shadow: 0 0 10px #ddd;
         }
     </style>
 </head>
 
 <body>
-    <h1>Task Schedular</h1>
+    <div class="header">
+        <h1>Task Scheduler</h1>
+    </div>
+
+    <div class="task-input">
+        <input type="text" id="taskInput" placeholder="Enter task...">
+        <select id="prioritySelect">
+            <option>Top Priority</option>
+            <option>Medium</option>
+            <option>Low</option>
+        </select>
+        <input type="date" id="dateInput">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <div class="task-list" id="taskList"></div>
+
+    <script>
+        function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const prioritySelect = document.getElementById('prioritySelect');
+            const dateInput = document.getElementById('dateInput');
+            const taskList = document.getElementById('taskList');
+
+            const task = taskInput.value;
+            const priority = prioritySelect.value;
+            const date = dateInput.value;
+
+            if (task === '' || date === '') {
+                alert("Please enter task and date.");
+                return;
+            }
+
+            const taskItem = document.createElement('div');
+            taskItem.textContent = `${task} - ${priority} - ${date}`;
+            taskItem.style.margin = "5px 0";
+            taskItem.style.borderBottom = "1px solid #ccc";
+            taskItem.style.padding = "5px";
+
+            taskList.appendChild(taskItem);
+
+            taskInput.value = '';
+            dateInput.value = '';
+            prioritySelect.selectedIndex = 0;
+        }
+
+    </script>
 </body>
 
 </html>
